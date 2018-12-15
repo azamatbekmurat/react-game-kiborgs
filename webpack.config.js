@@ -75,7 +75,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: 'template.ejs',
       appMountId: 'react-app-root',
-      title: 'React State',
+      title: 'React Kiborg',
       filename: resolve(__dirname, "build", "index.html"),
     })
   ]

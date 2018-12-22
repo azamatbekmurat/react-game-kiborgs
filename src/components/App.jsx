@@ -9,24 +9,24 @@ import UserInfo from './UserInfo'
 import Game from './Game'
 
 class App extends React.Component {
-    constructor(props){
-        super(props)
-    }
+  constructor(props){
+    super(props)
+  }
 
-    render() {
-        return(
-            <div>
-                <Header/>
-                <Navbar/>
-                <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/userinfo' component={UserInfo} />
-                    <Route path='/game' component={Game} />
-                </Switch>
-                <Footer/>
-            </div>
-        )
-    }
+  render() {
+    return(
+      <div>
+        <Header/>
+        <Navbar/>
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/userinfo' component={UserInfo} />
+          <Route path='/game' component={Game} />
+        </Switch>
+        <Footer/>
+      </div>
+    )
+  }
 }
 
-export default withRouter(connect()(App));
+export default withRouter(connect()(App))

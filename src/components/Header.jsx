@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Header() {
-    return(
-        <div>
-            <style jsx>{`
+  return(
+    <div>
+      <style jsx>{`
                 h2 {
                     text-align: center; 
                 }
@@ -12,10 +12,10 @@ export default function Header() {
                     background-color: gray;
                 }
             `}
-            </style>
-            <div className="header">
-                <h2>React Kiborgs</h2>
-            </div>
-        </div>
-    )
+      </style>
+      <div className="header">
+        <h2>React Kiborgs</h2>
+      </div>
+    </div>
+  )
 }

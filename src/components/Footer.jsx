@@ -1,9 +1,9 @@
 import React from 'react'
 
 export default function Footer() {
-    return(
-        <div>
-            <style jsx>{`
+  return(
+    <div>
+      <style jsx>{`
                 h3 {
                     text-align: center;
                 }
@@ -16,9 +16,9 @@ export default function Footer() {
                     background-color: gray;
                 }
             `}</style>
-            <div className="footer">
-                <h3>(c) Azamat {new Date().toLocaleDateString()}</h3>
-            </div>
-        </div>
-    )
+      <div className="footer">
+        <h3>(c) Azamat {new Date().toLocaleDateString()}</h3>
+      </div>
+    </div>
+  )
 }

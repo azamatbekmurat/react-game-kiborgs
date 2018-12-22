@@ -9,17 +9,17 @@ import { Provider } from 'react-redux'
 import middlewareLogger from './middleware/middleware-logger'
 import thunkMiddleware from 'redux-thunk'
 
-console.log(localStorage['kiborgsReduxStore']);
-let retrievedState;
+console.log(localStorage['kiborgsReduxStore'])
+let retrievedState
 try {
-    retrievedState = {
-        user: JSON.parse(localStorage['kiborgsReduxStore'])
-    }
-    if (!retrievedState.user){
-        retrievedState = {}
-    }
-} catch (err) {
+  retrievedState = {
+    user: JSON.parse(localStorage['kiborgsReduxStore'])
+  }
+  if (!retrievedState.user){
     retrievedState = {}
+  }
+} catch (err) {
+  retrievedState = {}
 }
 
 const store = createStore(rootReducer, retrievedState, applyMiddleware(middlewareLogger, thunkMiddleware))
@@ -27,18 +27,18 @@ const store = createStore(rootReducer, retrievedState, applyMiddleware(middlewar
 console.log(store.getState())
 
 let unsubscribe = store.subscribe(() =>
-    console.log(store.getState())
+  console.log(store.getState())
 )
 
 const render = (Component) => {
-    ReactDOM.render(
-        <HashRouter>
-            <Provider store={store}>
-                <Component/>
-            </Provider>
-        </HashRouter>,
-        document.getElementById('react-app-root')
-    )
+  ReactDOM.render(
+    <HashRouter>
+      <Provider store={store}>
+        <Component/>
+      </Provider>
+    </HashRouter>,
+    document.getElementById('react-app-root')
+  )
 }
 
 render(App)
